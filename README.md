@@ -2,8 +2,6 @@
 
 A simple package for a/b testing.
 
-If you don't use auto-discovery, add the ServiceProvider to the providers array in config/app.php
-
 # Installation
 
 If you don't use auto-discovery, add the ServiceProvider to the providers array in config/app.php
