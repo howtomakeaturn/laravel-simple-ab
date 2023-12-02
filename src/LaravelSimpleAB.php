@@ -4,18 +4,18 @@ namespace Howtomakeaturn\LaravelSimpleAB;
 
 class LaravelSimpleAB
 {
-    public function getExperiment()
-    {
-        // todo
-    }
+    protected $experiments = [];
 
-    public function getValue()
+    public function experiment($key)
     {
-        // todo
-    }
+        if (array_key_exists($key, $this->experiments)) {
+            return $this->experiments[$key];
+        }
 
-    public function increment()
-    {
-        // todo
+        $experiment = new Experiment($key);
+
+        $this->experiments[$key] = $experiment;
+
+        return $experiment;
     }
 }
