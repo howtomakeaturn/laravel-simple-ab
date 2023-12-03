@@ -19,4 +19,12 @@ class LaravelSimpleABServiceProvider extends ServiceProvider
             return $ab;
         });
     }
+
+    /**
+     * Bootstrap any package services.
+     */
+    public function boot(): void
+    {
+        $this->loadViewsFrom(__DIR__.'/resources/views', 'laravel-simple-ab');
+    }
 }
